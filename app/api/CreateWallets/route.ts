@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Keypair } from "@solana/web3.js";
 import { mnemonicToSeedSync } from "bip39";
 import { derivePath } from "ed25519-hd-key";
-import bs58 from "bs58";  // Add this import
+import bs58 from "bs58";
 
 export async function POST(req: NextRequest) {
     try {
@@ -26,18 +26,22 @@ export async function POST(req: NextRequest) {
         // Create Solana keypair
         const keypair = Keypair.fromSeed(derivedSeed);
 
+        // Convert secret key to base58 string
+        const secretKeyString = bs58.encode(Buffer.from(keypair.secretKey));
+
         return NextResponse.json({
             status: "success",
             wallet: {
                 publicKey: keypair.publicKey.toString(),
-                secretKey: bs58.encode(keypair.secretKey), // Convert to base58
+                secretKey: secretKeyString,
                 index: count
             }
         });
 
     } catch(e) {
+        console.error('Error creating wallet:', e);
         return NextResponse.json({
-            error: (e as Error).toString(),
+            error: (e as Error).message,
             status: "error"
         }, { status: 500 });
     }

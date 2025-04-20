@@ -95,40 +95,42 @@ export default function Dashboard() {
     }
 
     return (
-        <div className="flex flex-col items-center p-8 gap-6 min-h-screen bg-gray-900 text-gray-100">
-            <MnemonicDisplay 
-                mnemonic={mnemonic}
-                showMnemonic={showMnemonic}
-                setShowMnemonic={setShowMnemonic}
-            />
-            
-            <MnemonicInput 
-                customMnemonic={customMnemonic}
-                setCustomMnemonic={setCustomMnemonic}
-                onCreateWallet={createWallet}
-            />
+        <div className="flex flex-col items-center p-4 sm:p-6 md:p-8 gap-4 sm:gap-6 min-h-screen bg-gray-900 text-gray-100">
+            <div className="w-full max-w-4xl mx-auto">
+                <MnemonicDisplay 
+                    mnemonic={mnemonic}
+                    showMnemonic={showMnemonic}
+                    setShowMnemonic={setShowMnemonic}
+                />
+                
+                <MnemonicInput 
+                    customMnemonic={customMnemonic}
+                    setCustomMnemonic={setCustomMnemonic}
+                    onCreateWallet={createWallet}
+                />
 
-            <div className="w-full max-w-2xl">
-                <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-2xl font-bold text-gray-100">Your Wallets</h2>
-                    <button 
-                        onClick={updateBalances}
-                        className="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-sm"
-                    >
-                        Refresh Balances
-                    </button>
-                </div>
-                <div className="space-y-4">
-                    {wallets.map((wallet, index) => (
-                        <WalletCard
-                            key={wallet.publicKey}
-                            wallet={wallet}
-                            index={index}
-                            isPrivateKeyVisible={visiblePrivateKeys.has(index)}
-                            onTogglePrivateKey={() => togglePrivateKey(index)}
-                            onDelete={() => deleteWallet(index)}
-                        />
-                    ))}
+                <div className="w-full mt-6">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+                        <h2 className="text-xl sm:text-2xl font-bold text-gray-100">Your Wallets</h2>
+                        <button 
+                            onClick={updateBalances}
+                            className="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-sm transition-colors"
+                        >
+                            Refresh Balances
+                        </button>
+                    </div>
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {wallets.map((wallet, index) => (
+                            <WalletCard
+                                key={wallet.publicKey}
+                                wallet={wallet}
+                                index={index}
+                                isPrivateKeyVisible={visiblePrivateKeys.has(index)}
+                                onTogglePrivateKey={() => togglePrivateKey(index)}
+                                onDelete={() => deleteWallet(index)}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
