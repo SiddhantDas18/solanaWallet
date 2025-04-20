@@ -3,7 +3,6 @@
 import axios from "axios"
 import { generateMnemonic } from "bip39"
 import { useState, useEffect } from "react"
-import bs58 from 'bs58';
 import { Connection, PublicKey } from "@solana/web3.js";
 import MnemonicDisplay from "./components/MnemonicDisplay"
 import WalletCard from "./components/WalletCard"

@@ -55,7 +55,7 @@ export default function MnemonicInput({
                             {!showMnemonic && (
                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                     <div className="text-gray-500 text-sm font-mono">
-                                        {customMnemonic.split(' ').map((_, i) => '••••••••').join(' ')}
+                                        {Array(customMnemonic.split(' ').length).fill('••••••••').join(' ')}
                                     </div>
                                 </div>
                             )}
