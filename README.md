@@ -1,4 +1,4 @@
-# 🏦 Gullak Wallet
+#  Gullak Wallet
 
 A minimal and secure Solana wallet manager built with Next.js and TypeScript.
 
@@ -7,14 +7,14 @@ A minimal and secure Solana wallet manager built with Next.js and TypeScript.
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 ![Solana](https://img.shields.io/badge/Solana-000000?style=flat&logo=solana&logoColor=white)
 
-## ✨ Features
+##  Features
 
-- 🔒 Secure mnemonic phrase management
-- 💰 Multiple wallet support
-- 📱 Responsive design for all devices
-- 🔄 Real-time balance updates
-- 🛡️ Private key protection
-- 🚀 Fast and efficient
+-  Secure mnemonic phrase management
+-  Multiple wallet support
+-  Responsive design for all devices
+-  Real-time balance updates
+-  Private key protection
+-  Fast and efficient
 
 
 ### Prerequisites
@@ -60,28 +60,28 @@ A minimal and secure Solana wallet manager built with Next.js and TypeScript.
    docker run -p [your_port]:3000 gullak_wallet
    ```
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend**: Next.js, TypeScript, Tailwind CSS
 - **Blockchain**: Solana Web3.js
 - **Styling**: Tailwind CSS
 - **Deployment**: Docker
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+##  Author
 
 - **Siddhant Das**
   - GitHub: [siddhantdas18](https://github.com/siddhantdas18)
   - Portfolio: [siddhant.space](https://siddhant.space)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## ⚠️ Security
+##  Security
 
 Please report any security issues to the repository maintainers.
 
