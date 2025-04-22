@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏦 Gullak Wallet
 
-## Getting Started
+A minimal and secure Solana wallet manager built with Next.js and TypeScript.
 
-First, run the development server:
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
+![Solana](https://img.shields.io/badge/Solana-000000?style=flat&logo=solana&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔒 Secure mnemonic phrase management
+- 💰 Multiple wallet support
+- 📱 Responsive design for all devices
+- 🔄 Real-time balance updates
+- 🛡️ Private key protection
+- 🚀 Fast and efficient
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- [Node.js](https://nodejs.org/en/download) (v18 or higher)
+- [TypeScript](https://www.typescriptlang.org/download) (if not installed globally)
+- [Docker](https://www.docker.com/) (optional, for containerized deployment)
 
-To learn more about Next.js, take a look at the following resources:
+### Local Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/siddhantdas18/gullakwallet.git
+   cd gullakwallet
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Open your browser**
+   Visit `http://localhost:3000`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Docker Deployment
+
+1. **Build the Docker image**
+   ```bash
+   docker build -t gullak_wallet .
+   ```
+
+2. **Run the container**
+   ```bash
+   # Using default port (3000)
+   docker run -p 3000:3000 gullak_wallet
+
+   # Or using a custom port
+   docker run -p [your_port]:3000 gullak_wallet
+   ```
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, TypeScript, Tailwind CSS
+- **Blockchain**: Solana Web3.js
+- **Styling**: Tailwind CSS
+- **Deployment**: Docker
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+- **Siddhant Das**
+  - GitHub: [siddhantdas18](https://github.com/siddhantdas18)
+  - Portfolio: [siddhant.space](https://siddhant.space)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## ⚠️ Security
+
+Please report any security issues to the repository maintainers.
+
+---
+
+Made with ❤️ by [Siddhant Das](https://github.com/siddhantdas18)
+
+
